@@ -1,0 +1,24 @@
+.zapf-portfolio-single-item {
+	position: relative;
+}
+.zapf-portfolio-single-item .wp-post-image {
+	margin: 0;
+}
+.zapf-portfolio-single-item .title-box {
+	position: absolute;
+	bottom: 0;
+	display: block;
+	width: 100%;
+	background: rgba(255,255,255,0.6);
+	padding: 15px;
+	z-index: 15;
+}
+
+
+/*** Clear Fix ***/
+
+.clearfix{
+
+	clear: both;
+
+}
