@@ -78,6 +78,69 @@ function zapf_rewrite_flush() {
 register_activation_hook( __FILE__, 'zapf_rewrite_flush' );
 
 
+
+
+/**
+ *  Register Field Groups
+ *
+ *  The register_field_group function accepts 1 array which holds the relevant data to register a field group
+ *  You may edit the array as you see fit. However, this may result in errors if the array is not compatible with ACF
+ */
+
+if(function_exists("register_field_group"))
+{
+	register_field_group(array (
+		'id' => 'acf_portfolio',
+		'title' => 'Portfolio',
+		'fields' => array (
+			array (
+				'key' => 'field_526e0d18226b5',
+				'label' => 'Customer',
+				'name' => 'customer',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'none',
+				'maxlength' => '',
+			),
+			array (
+				'key' => 'field_526e0d39226b6',
+				'label' => 'Portfolio Item Url',
+				'name' => 'portfolio_item_url',
+				'type' => 'text',
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'formatting' => 'none',
+				'maxlength' => '',
+			),
+		),
+		'location' => array (
+			array (
+				array (
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'zapf-portfolio-item',
+					'order_no' => 0,
+					'group_no' => 0,
+				),
+			),
+		),
+		'options' => array (
+			'position' => 'acf_after_title',
+			'layout' => 'no_box',
+			'hide_on_screen' => array (
+			),
+		),
+		'menu_order' => 0,
+	));
+}
+
+
+
 /**
 * Returns template file
 *

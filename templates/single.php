@@ -16,7 +16,7 @@
 				</div>
 				<footer class="entry-meta">
 
-					<a target="_<?php echo $open_link; ?>" href="<?php $item->item_link ?>">Link to Website</a>
+					<a target="_<?php echo $open_link; ?>" href="<?php the_field('portfolio_item_url'); ?>">Link to Website</a>
 
 					<time><?php the_date(); ?></time><p><?php the_tags('Tags:',','); ?></p><p>Categories: <?php the_category(', '); ?></p>
 
